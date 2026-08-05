@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
+  pool: <%= ENV['RAILS_MAX_THREADS'] || 5 %>
+
+development:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] || 'myapp_development' %>
+
+test:
+  <<: *default
+  database: my_project_test
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] || 'myapp_production' %>

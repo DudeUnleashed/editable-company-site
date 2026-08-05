@@ -1,0 +1,107 @@
+.admin-settings {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-section {
+  background: var(--card-bg, white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.settings-section h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.settings-description {
+  color: var(--text-secondary, #64748b);
+  margin-bottom: 1.5rem;
+}
+
+.settings-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #64748b);
+  margin-top: 1rem;
+}
+
+.gcal-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.gcal-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.gcal-status-dot.connected {
+  background: #22c55e;
+}
+
+.gcal-status-dot.disconnected {
+  background: #94a3b8;
+}
+
+.gcal-warning {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.gcal-info {
+  background: var(--bg-secondary, #f8fafc);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.gcal-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.gcal-info-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-color-light, #e2e8f0);
+}
+
+.gcal-info-row span:first-child {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.gcal-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.gcal-disconnected p {
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .admin-settings {
+    padding: 1rem;
+  }
+
+  .gcal-actions {
+    flex-direction: column;
+  }
+
+  .gcal-actions button {
+    width: 100%;
+  }
+}

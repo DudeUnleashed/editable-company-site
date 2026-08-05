@@ -1,0 +1,96 @@
+/* ==========================================
+   LOGIN PAGE LAYOUT
+   ========================================== */
+
+/* Full-page centered layout */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f5f9;
+  font-family: "Inter", sans-serif;
+}
+
+/* ==========================================
+   LOGIN CARD
+   ========================================== */
+
+/* Login card container */
+.login-card {
+  background: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Card header */
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1e293b;
+}
+
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   LOGIN FORM
+   ========================================== */
+
+/* Form layout */
+.login-form {
+  text-align: left;
+}
+
+.login-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================
+   LOGIN BUTTON
+   ========================================== */
+
+/* Submit button */
+.login-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* ==========================================
+   LOGIN FOOTER
+   ========================================== */
+
+/* Footer links */
+.login-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}

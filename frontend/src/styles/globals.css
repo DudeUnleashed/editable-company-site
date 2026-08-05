@@ -1,0 +1,222 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Design System Variables */
+:root {
+  /* Colors */
+  --primary: #2563eb;
+  --primary-hover: #1e40af;
+  --hero-overlay: rgba(43, 108, 176, 0.55);
+  --footer-bg: #1e293b;
+  --secondary: #64748b;
+
+  /* Backgrounds */
+  --bg-light: #ffffff;
+  --bg-gray: #f8fafc;
+  --bg-gray-dark: #f1f5f9;
+
+  /* Borders */
+  --border-color: #cbd5e1;
+  --border-color-light: #e2e8f0;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Status colors */
+  --status-pending-bg: #fef3c7;
+  --status-pending-text: #b45309;
+  --status-success-bg: #dcfce7;
+  --status-success-text: #166534;
+  --status-error-bg: #fee2e2;
+  --status-error-text: #991b1b;
+  --status-info-bg: #dbeafe;
+  --status-info-text: #1e40af;
+  --status-progress-bg: #ede9fe;
+  --status-progress-text: #6d28d9;
+  --status-cancelled-bg: #f3f4f6;
+  --status-cancelled-text: #4b5563;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Base card component */
+.card {
+  background: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+/* Button system */
+.btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button variants */
+.btn-success {
+  background: var(--status-success-text);
+}
+
+.btn-failure {
+  background: var(--status-error-text);
+}
+
+/* Status badges */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.status.accepted,
+.status.approved {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.status.rejected {
+  background: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+/* Status badge variant (used in quotes/jobs table) */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.status-badge.status-pending {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.status-badge.status-accepted,
+.status-badge.status-approved {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.status-badge.status-rejected {
+  background: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.status-badge.status-scheduled {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+
+.status-badge.status-in_progress {
+  background: var(--status-progress-bg);
+  color: var(--status-progress-text);
+}
+
+.status-badge.status-completed {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.status-badge.status-cancelled {
+  background: var(--status-cancelled-bg);
+  color: var(--status-cancelled-text);
+}
+
+/* Error and success text */
+.error-text {
+  margin-top: 0.4rem;
+  color: var(--status-error-text);
+  font-size: 0.875rem;
+}
+
+.success-text {
+  margin: 0 0 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #065f46;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* Skip to main content link (accessibility) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}

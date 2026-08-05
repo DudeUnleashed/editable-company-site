@@ -1,0 +1,138 @@
+.expanded-row-content {
+  padding: 1.5rem;
+  background: var(--bg-light, #fff);
+  white-space: normal;
+}
+
+.expanded-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.expanded-row-header h3 {
+  margin: 0;
+}
+
+.expanded-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.expanded-row-grid > * {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.expanded-row-grid.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.expanded-row-section h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.expanded-row-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.expanded-row-field-edit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expanded-row-field-edit strong {
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.expanded-row-field-edit input {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  max-width: 180px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.expanded-row-timestamps {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.expanded-row-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.expanded-row-save-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  justify-content: flex-end;
+}
+
+.expanded-row-notes {
+  margin-bottom: 1.25rem;
+}
+
+.expanded-row-notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.expanded-row-notes-header h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1200px) {
+  .expanded-row-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expanded-row-grid.two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .expanded-row-content {
+    padding: 1rem;
+  }
+
+  .expanded-row-grid,
+  .expanded-row-grid.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .expanded-row-field-edit input {
+    max-width: 100%;
+  }
+
+  .expanded-row-timestamps {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

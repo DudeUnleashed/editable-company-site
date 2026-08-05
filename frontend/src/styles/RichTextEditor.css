@@ -1,0 +1,80 @@
+.rte-container {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rte-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 0.5rem;
+  background: var(--bg-secondary, #f1f5f9);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rte-btn {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary, #64748b);
+  transition: all 0.15s;
+}
+
+.rte-btn:hover {
+  background: var(--bg-hover, #e2e8f0);
+  color: var(--text-color);
+}
+
+.rte-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.rte-separator {
+  width: 1px;
+  background: var(--border-color);
+  margin: 0 4px;
+}
+
+.rte-content {
+  min-height: 150px;
+  padding: 0.75rem;
+}
+
+.rte-content .tiptap {
+  outline: none;
+  min-height: 120px;
+}
+
+.rte-content .tiptap p {
+  margin: 0.5em 0;
+}
+
+.rte-content .tiptap h3,
+.rte-content .tiptap h4 {
+  margin: 0.75em 0 0.25em;
+}
+
+.rte-content .tiptap ul,
+.rte-content .tiptap ol {
+  padding-left: 1.5rem;
+  margin: 0.5em 0;
+}
+
+.rte-content .tiptap blockquote {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  margin: 0.5em 0;
+  color: var(--text-secondary);
+}
+
+.rte-content .tiptap a {
+  color: var(--primary);
+  text-decoration: underline;
+}

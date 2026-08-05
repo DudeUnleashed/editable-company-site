@@ -1,0 +1,59 @@
+/* ==========================================
+   CARD COMPONENTS
+   ========================================== */
+
+/* Base card (inherits from globals.css) */
+.card {
+  /* Base styles from globals.css: background, padding, border-radius, box-shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Card typography */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #1a202c;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CARD LAYOUTS
+   ========================================== */
+
+/* Card grid layout */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(var(--stats-columns, 3), 1fr);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,79 @@
+/* ==========================================
+   HERO BAR CONTAINER
+   ========================================== */
+
+/* Main hero section */
+.hero-bar {
+  position: relative;
+  background: url('/path/to/your/image.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  overflow: hidden;
+}
+
+/* Semi-transparent overlay */
+.hero-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hero-overlay);
+  z-index: 0;
+}
+
+/* ==========================================
+   HERO CONTENT
+   ========================================== */
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hero title */
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #e0e7ff;
+  margin: 0;
+}
+
+/* ==========================================
+   HERO BUTTON
+   ========================================== */
+
+/* Call-to-action button */
+.hero-button {
+  display: inline-block;
+  background: #fff;
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero-button:hover {
+  background: var(--primary);
+  color: #fff;
+}

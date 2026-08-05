@@ -1,0 +1,314 @@
+.admin-cms {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.cms-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cms-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.cms-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.cms-tab:hover {
+  color: var(--text-color);
+}
+
+.cms-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.cms-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cms-section {
+  background: var(--card-bg, white);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.cms-section--modified {
+  border-left-color: var(--primary);
+}
+
+.cms-section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.cms-section-type {
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 0.15rem 0.5rem;
+  background: var(--bg-secondary, #f1f5f9);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.cms-text-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--card-bg, white);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.cms-text-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+textarea.cms-text-input {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* JSON Editor Styles */
+.json-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.json-editor-item {
+  border: 1px solid var(--border-color-light, #e2e8f0);
+  border-radius: 6px;
+  padding: 1rem;
+  background: var(--bg-secondary, #f8fafc);
+}
+
+.json-editor-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.json-editor-item-number {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.json-editor-item-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.json-editor-item-actions button {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--card-bg, white);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.json-editor-item-actions button:hover:not(:disabled) {
+  background: var(--bg-hover, #e2e8f0);
+}
+
+.json-editor-item-actions button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.json-remove-btn {
+  color: var(--danger, #dc2626) !important;
+  font-weight: bold;
+}
+
+.json-editor-field {
+  margin-bottom: 0.5rem;
+}
+
+.json-editor-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.json-editor-field input,
+.json-editor-field textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.json-editor-field input:focus,
+.json-editor-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.json-editor-field textarea {
+  resize: vertical;
+}
+
+.json-editor-string-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.json-editor-string-item input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.json-editor-string-item input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.json-editor-string-item .json-remove-btn {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--card-bg, white);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.json-add-btn {
+  padding: 0.5rem 1rem;
+  border: 1px dashed var(--border-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.json-add-btn:hover {
+  background: var(--bg-secondary, #f1f5f9);
+  border-color: var(--primary);
+}
+
+/* Services tab header */
+.cms-services-tab {
+  padding-bottom: 2rem;
+}
+
+.cms-services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cms-services-header p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Info note */
+.cms-info-note {
+  padding: 1rem 1.25rem;
+  background: var(--bg-secondary, #f1f5f9);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cms-info-note-link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.cms-info-note-link:hover {
+  opacity: 0.8;
+}
+
+/* Sticky save bar */
+.cms-save-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg, white);
+  border-top: 2px solid var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.cms-save-bar span {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .admin-cms {
+    padding: 1rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .cms-tabs {
+    overflow-x: auto;
+  }
+}

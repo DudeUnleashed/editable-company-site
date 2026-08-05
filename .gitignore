@@ -1,0 +1,48 @@
+# Environment Variables (CRITICAL - Contains sensitive data)
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+backend/.env
+backend/.env.local
+
+# Rails Master Key (CRITICAL - Decrypts credentials)
+backend/config/master.key
+backend/config/credentials/*.key
+
+# Database
+*.sqlite3
+*.sqlite3-*
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/log/*
+backend/tmp/*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ruby-lsp/
+.claude/
+
+# Docker volumes
+db_data/

@@ -1,0 +1,42 @@
+.admin-reviews {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reviews-table-container {
+  background: var(--card-bg, white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.review-preview {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background: var(--status-success-bg, #dcfce7);
+  color: var(--status-success-text, #166534);
+}
+
+.status-badge.inactive {
+  background: var(--bg-secondary, #f1f5f9);
+  color: var(--text-secondary, #64748b);
+}
+
+@media (max-width: 768px) {
+  .admin-reviews {
+    padding: 1rem;
+  }
+}

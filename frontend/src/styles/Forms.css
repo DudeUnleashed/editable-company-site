@@ -1,0 +1,245 @@
+/* ==========================================
+   FORM CARD CONTAINER
+   ========================================== */
+
+/* Form card wrapper */
+.form-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.form-card h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* ==========================================
+   FORM LAYOUT
+   ========================================== */
+
+/* Base form structure */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+/* Form field groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #475569;
+}
+
+/* Form row layout (multi-column) */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Centered row variant */
+.form-row.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+/* Inline form group (for radio buttons, etc.) */
+.form-group.inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-group.inline label {
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================
+   FORM INPUTS & CONTROLS
+   ========================================== */
+
+/* Text inputs and textareas */
+.form-group input,
+.form-group textarea,
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  background: var(--bg-light);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* Dropdown (select) styling */
+.form-group select,
+.form-card select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: var(--bg-light);
+  color: #1e293b;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%23475569' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.form-group select:focus,
+.form-card select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  outline: none;
+}
+
+/* Error state for inputs */
+.input-error {
+  border-color: var(--status-error-text) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
+}
+
+/* ==========================================
+   FORM BUTTONS
+   ========================================== */
+
+/* Full-width submit button */
+.form-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================
+   PILL RADIO BUTTONS
+   ========================================== */
+
+/* Pill group container */
+.pill-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Individual pill button */
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background: var(--bg-gray);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill input[type="radio"] {
+  display: none;
+}
+
+/* Checked state */
+.pill:has(input[type="radio"]:checked) {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Hover effect */
+.pill:hover {
+  background-color: #e0e7ff;
+}
+
+/* ==========================================
+   FORM SUBCARDS
+   ========================================== */
+
+/* Subcard boxes for grouped fields */
+.form-subcard {
+  flex: 1;
+  background: #fafafa;
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.form-subcard label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   SPECIAL FORM SECTIONS
+   ========================================== */
+
+/* Service info display box */
+.service-info-box {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.service-info-box h3,
+.service-info-box h4 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+}
+
+.service-info-box .cost {
+  font-weight: bold;
+  color: #0057b8;
+}
+
+/* ==========================================
+   LEGACY COMPATIBILITY
+   ========================================== */
+
+/* Back-compat for older quote form markup */
+.quote-form label {
+  font-weight: 600;
+  color: #475569;
+}
+
+.quote-form input,
+.quote-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
