@@ -14,7 +14,8 @@ if [ -z "$DOMAIN" ] || [ -z "$EMAIL" ]; then
 fi
 
 echo "==> Creating dummy certificate for $DOMAIN..."
-mkdir -p ./certbot/conf/live/$DOMAIN
+docker compose -f docker-compose.prod.yml run --rm --entrypoint "\
+  mkdir -p /etc/letsencrypt/live/$DOMAIN" certbot
 docker compose -f docker-compose.prod.yml run --rm --entrypoint "\
   openssl req -x509 -nodes -newkey rsa:2048 -days 1 \
     -keyout /etc/letsencrypt/live/$DOMAIN/privkey.pem \
