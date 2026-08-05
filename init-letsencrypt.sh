@@ -34,7 +34,7 @@ echo "==> Requesting real certificate from Let's Encrypt..."
 docker compose -f docker-compose.prod.yml run --rm --entrypoint "\
   certbot certonly --webroot -w /var/www/certbot \
     --email $EMAIL \
-    -d $DOMAIN \
+    -d $DOMAIN -d www.$DOMAIN \
     --agree-tos \
     --no-eff-email \
     --force-renewal" certbot
