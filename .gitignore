@@ -43,6 +43,7 @@ Thumbs.db
 *~
 .ruby-lsp/
 .claude/
+.htpasswd
 
 # Docker volumes
 db_data/

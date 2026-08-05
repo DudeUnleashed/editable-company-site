@@ -55,6 +55,7 @@ services:
     volumes:
       - certbot_conf:/etc/letsencrypt:ro
       - certbot_www:/var/www/certbot:ro
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro
     depends_on:
       - backend
 
